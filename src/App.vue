@@ -33,7 +33,7 @@
 
     </v-toolbar>
     <v-content>
-      <calculator/>
+      <main-layout/>
     </v-content>
    
     <v-footer :fixed="fixed" app>
@@ -43,11 +43,11 @@
 </template>
 
 <script>
-import Calculator from "./components/Calculator";
+import MainLayout from "./components/MainLayout";
 export default {
   name: "App",
   components: {
-    Calculator
+    MainLayout
   },
   data() {
     return {
