@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app :dark="dark">
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
@@ -30,7 +30,13 @@
     >
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title v-text="title"></v-toolbar-title>
-
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-switch
+          :label="dark ? 'light':'dark'"
+          v-model="dark"
+        ></v-switch>
+      </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <main-layout/>
@@ -54,6 +60,7 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
+      dark: false,
       items: [
         {
           icon: "bubble_chart",
