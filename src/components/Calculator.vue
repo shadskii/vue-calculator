@@ -29,6 +29,7 @@ const MULTIPLY = "X";
 const EQUAL = "=";
 const CLEAR = "C";
 const DECIMAL = ".";
+const NEGATE = "+/-";
 
 const doMath = (val1, val2, op) => {
   switch (op) {
@@ -55,18 +56,20 @@ export default {
         7,
         8,
         9,
-        DIVIDE,
+        ADD,
         4,
         5,
         6,
-        MULTIPLY,
+        DIVIDE,
         1,
         2,
         3,
-        SUBTRACT,
+        MULTIPLY,
         0,
         DECIMAL,
         CLEAR,
+        SUBTRACT,
+        NEGATE,
         EQUAL
       ]
     };
