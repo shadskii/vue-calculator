@@ -10,6 +10,7 @@
             <v-btn
             class="item"
             v-for="key in keys"
+            :id="`key-${key=== '='? 'equals' : 'key'}`"
             :key="key"
             :v-text="key"
             :color="getColor(key)"
@@ -141,8 +142,7 @@ export default {
   display: grid;
   justify-content: center;
 }
-.equals-key {
-  grid-column-start: 3;
-  grid-column-end: 4;
+#key-equals {
+  grid-column: span 2;
 }
 </style>
