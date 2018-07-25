@@ -30,6 +30,7 @@ const EQUAL = "=";
 const CLEAR = "C";
 const DECIMAL = ".";
 const NEGATE = "+/-";
+const PERCENT = "%";
 
 const doMath = (val1, val2, op) => {
   switch (op) {
@@ -70,6 +71,7 @@ export default {
         CLEAR,
         SUBTRACT,
         NEGATE,
+        PERCENT,
         EQUAL
       ]
     };
@@ -138,5 +140,9 @@ export default {
 .item {
   display: grid;
   justify-content: center;
+}
+.equals-key {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 </style>
