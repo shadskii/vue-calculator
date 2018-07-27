@@ -64,7 +64,7 @@ export default {
       items: [
         {
           icon: "bubble_chart",
-          title: "Inspire"
+          title: "Yupp"
         }
       ],
       miniVariant: false,
