@@ -114,7 +114,7 @@ export default {
           this.val1 = this.val1 * 10 + key;
         } else {
           this.val2 = this.val2 * 10 + key;
-        }
+        } 
       }
     },
     getColor(key) {
