@@ -28,7 +28,7 @@
       <main-layout/>
     </v-content>
 
-    <v-footer :fixed="fixed" app>
+    <v-footer app>
       <span>&copy; Made by Jake</span>
     </v-footer>
   </v-app>
