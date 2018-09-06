@@ -1,25 +1,17 @@
 <template>
+  <v-card>
+    <!-- <div class='elevation-3'>5-5</div> -->
     <v-card>
-        <!-- <div class='elevation-3'>5-5</div> -->
-        <v-card>
-            <v-card-text>
-                <p class="text-xs-right headline">{{value}}</p>
-            </v-card-text>
-        </v-card>
-        <div class='container'>
-            <v-btn
-            class="item"
-            v-for="key in keys"
-            :id="`key-${key=== '='? 'equals' : 'key'}`"
-            :key="key"
-            :v-text="key"
-            :color="getColor(key)"
-            @click="doOp(key)"
-            >
-                {{key}}
-            </v-btn>
-        </div>
+      <v-card-text>
+        <p class="text-xs-right headline">{{value}}</p>
+      </v-card-text>
     </v-card>
+    <div class='container'>
+      <v-btn class="item" v-for="key in keys" :id="`key-${key=== '='? 'equals' : 'key'}`" :key="key" :v-text="key" :color="getColor(key)" @click="doOp(key)">
+        {{key}}
+      </v-btn>
+    </div>
+  </v-card>
 </template>
 
 <script>
@@ -108,13 +100,16 @@ export default {
             this.val2 = 0;
             this.activeKey = "";
             break;
+          case NEGATE:
+            this.val1 *= -1;
+            break;
         }
       } else {
         if (this.activeKey === "") {
           this.val1 = this.val1 * 10 + key;
         } else {
           this.val2 = this.val2 * 10 + key;
-        } 
+        }
       }
     },
     getColor(key) {
