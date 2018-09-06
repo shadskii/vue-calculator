@@ -1,6 +1,6 @@
 <template>
   <v-app :dark="dark">
-    <v-navigation-drawer persistent :mini-variant="miniVariant" v-model="drawer" enable-resize-watcher fixed app>
+    <v-navigation-drawer persistent v-model="drawer" enable-resize-watcher fixed app>
       <v-list>
         <v-list-tile value="true" v-for="(item, i) in items" :key="i">
           <v-list-tile-action>
@@ -46,7 +46,6 @@ export default {
       drawer: false,
       dark: false,
       items: [],
-      miniVariant: false,
       title: "Calculator"
     };
   }
